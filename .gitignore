@@ -1,0 +1,26 @@
+# Secrets — never commit
+backend/.env
+backend/oauth_secrets.json
+backend/secret.key
+backend/browser_profiles/
+client_secret_*.json
+*.pem
+
+# Local data
+backend/cirrus.db
+backend/temp_processing/
+backend/mock_storage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db

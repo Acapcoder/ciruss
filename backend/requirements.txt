@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+cryptography
+boto3
+google-cloud-storage
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+dropbox
+python-multipart
+requests
+psycopg2-binary
+python-dotenv
+playwright
+pyjwt
+greenlet

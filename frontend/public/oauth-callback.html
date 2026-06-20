@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CIRRUS — Signing in…</title>
+  <style>
+    body { background:#0b0f1a; color:#94a3b8; font-family:system-ui,sans-serif;
+           display:grid; place-items:center; height:100vh; margin:0; }
+  </style>
+</head>
+<body>
+  <div>You can close this window.</div>
+  <script>
+    // The OAuth provider redirected here with the token in the URL fragment.
+    var h = new URLSearchParams(location.hash.slice(1));
+    var data = {
+      cirrus_oauth: true,
+      access_token: h.get("access_token"),
+      expires_in: h.get("expires_in"),
+      error: h.get("error_description") || h.get("error")
+    };
+    if (window.opener) {
+      window.opener.postMessage(data, location.origin);
+    }
+    setTimeout(function () { window.close(); }, 300);
+  </script>
+</body>
+</html>
